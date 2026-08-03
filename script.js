@@ -32,3 +32,4 @@ document.getElementById("seconds").textContent=String(s).padStart(2,"0");
 
 },1000);
 console.log("Brands & Newsletter Loaded");
+console.log("Shopping Cart Ready");
