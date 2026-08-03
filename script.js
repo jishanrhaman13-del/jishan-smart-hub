@@ -3,3 +3,4 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Jishan Mart Loaded Successfully 🚀");
 });
+console.log("Premium Header Loaded");
