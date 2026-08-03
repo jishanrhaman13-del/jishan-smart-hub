@@ -1,35 +1,100 @@
-// Jishan Mart
+// Flash Sale Countdown Timer
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Jishan Mart Loaded Successfully 🚀");
+let hours = 12;
+let minutes = 59;
+let seconds = 59;
+
+const h = document.getElementById("hours");
+const m = document.getElementById("minutes");
+const s = document.getElementById("seconds");
+
+setInterval(() => {
+
+    seconds--;
+
+    if (seconds < 0) {
+        seconds = 59;
+        minutes--;
+    }
+
+    if (minutes < 0) {
+        minutes = 59;
+        hours--;
+    }
+
+    if (hours < 0) {
+        hours = 12;
+        minutes = 59;
+        seconds = 59;
+    }
+
+    h.textContent = String(hours).padStart(2, "0");
+    m.textContent = String(minutes).padStart(2, "0");
+    s.textContent = String(seconds).padStart(2, "0");
+
+}, 1000);
+
+
+// Search Box
+
+const searchInput = document.querySelector(".search-box input");
+
+searchInput.addEventListener("keyup", function () {
+
+    let value = this.value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+
+        let text = product.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+
+    });
+
 });
-console.log("Premium Header Loaded");
-console.log("Categories Section Loaded");
-console.log("Featured Products Loaded");
-let h=12,m=59,s=59;
 
-setInterval(()=>{
 
-if(s>0){
-s--;
-}else{
-s=59;
+// Button Click Animation
 
-if(m>0){
-m--;
-}else{
-m=59;
+document.querySelectorAll(".btn").forEach(button => {
 
-if(h>0){
-h--;
-}
-}
-}
+    button.addEventListener("click", () => {
 
-document.getElementById("hours").textContent=String(h).padStart(2,"0");
-document.getElementById("minutes").textContent=String(m).padStart(2,"0");
-document.getElementById("seconds").textContent=String(s).padStart(2,"0");
+        button.innerHTML = "✔ Added";
 
-},1000);
-console.log("Brands & Newsletter Loaded");
-console.log("Shopping Cart Ready");
+        setTimeout(() => {
+            button.innerHTML = "Add to Cart";
+        }, 1500);
+
+    });
+
+});
+
+
+// Smooth Scroll
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+});
