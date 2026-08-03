@@ -44,3 +44,47 @@ img{
 .btn:hover{
     transform:translateY(-3px);
 }
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.search{
+    display:flex;
+    width:420px;
+}
+
+.search input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px 0 0 8px;
+    outline:none;
+}
+
+.search button{
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 18px;
+    border-radius:0 8px 8px 0;
+    cursor:pointer;
+}
+
+.menu a{
+    margin:0 10px;
+    color:#222;
+    font-weight:600;
+}
+
+.icons{
+    font-size:22px;
+}
