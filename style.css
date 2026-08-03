@@ -286,3 +286,19 @@ border:none;
 border-radius:10px;
 outline:none;
 }
+.cart-item{
+background:#fff;
+padding:20px;
+margin:20px 0;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.cart-summary{
+margin-top:30px;
+padding:25px;
+background:#2563eb;
+color:#fff;
+border-radius:15px;
+text-align:center;
+}
