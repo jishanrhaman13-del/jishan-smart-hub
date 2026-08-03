@@ -159,8 +159,12 @@ transition:.3s;
 background:#ff9800;
 }
 
-.offer-card{
 
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
 .product-grid,
 .flash-grid,
 .brand-grid{
