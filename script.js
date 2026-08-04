@@ -369,41 +369,28 @@ alert("Login feature will be connected to database later.");
 
 popup.style.display="none";
 
-};
-// ==========================
-// SELLER POPUP
-// ==========================
+// SELLER POPUP FIX
 
-const sellerBtnOpen = document.querySelector(".seller .btn");
+const sellerButtons = document.querySelectorAll(".btn2, .seller .btn");
 const sellerPopup = document.getElementById("sellerPopup");
-const sellerClose = document.getElementById("closeSeller");
-const sellerRegister = document.getElementById("sellerBtn");
+const closeSeller = document.getElementById("closeSeller");
 
-if (sellerBtnOpen) {
-    sellerBtnOpen.addEventListener("click", function(e) {
+sellerButtons.forEach(btn => {
+    btn.addEventListener("click", function(e){
         e.preventDefault();
         sellerPopup.style.display = "flex";
     });
-}
+});
 
-if (sellerClose) {
-    sellerClose.addEventListener("click", function() {
-        sellerPopup.style.display = "none";
-    });
-}
+closeSeller.addEventListener("click", function(){
+    sellerPopup.style.display = "none";
+});
 
-window.addEventListener("click", function(e) {
-    if (e.target === sellerPopup) {
+window.addEventListener("click", function(e){
+    if(e.target === sellerPopup){
         sellerPopup.style.display = "none";
     }
 });
-
-if (sellerRegister) {
-    sellerRegister.addEventListener("click", function() {
-        alert("✅ Seller Registration Successful!");
-        sellerPopup.style.display = "none";
-    });
-}
 // Seller Popup Close Fix
 
 let sellerPopup = document.getElementById("sellerPopup");
