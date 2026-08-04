@@ -154,3 +154,32 @@ header.style.boxShadow="none";
 }
 
 });
+// ================================
+// JU MART - Live Search
+// ================================
+
+const searchInput = document.querySelector(".search input");
+
+searchInput.addEventListener("keyup", function () {
+
+    let value = this.value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(function(product){
+
+        let name = product.innerText.toLowerCase();
+
+        if(name.indexOf(value) > -1){
+
+            product.style.display="block";
+
+        }else{
+
+            product.style.display="none";
+
+        }
+
+    });
+
+});
