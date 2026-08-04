@@ -199,3 +199,90 @@ gap:10px;
 }
 
 }
+/* ==========================
+   Categories Section
+========================== */
+
+.section-title{
+text-align:center;
+font-size:38px;
+margin:70px 0 35px;
+color:#FFD700;
+font-weight:700;
+}
+
+.categories{
+padding:40px 6%;
+background:#0f172a;
+}
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+}
+
+.category-card{
+background:#1e293b;
+padding:35px 20px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+cursor:pointer;
+border:1px solid rgba(255,215,0,.2);
+}
+
+.category-card:hover{
+transform:translateY(-10px);
+background:#FFD700;
+color:#000;
+box-shadow:0 20px 40px rgba(255,215,0,.25);
+}
+
+.category-card i{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.category-card h3{
+font-size:20px;
+}
+
+/* ==========================
+   Flash Sale
+========================== */
+
+.flash-sale{
+margin:70px auto;
+width:90%;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+padding:60px 20px;
+border-radius:25px;
+text-align:center;
+}
+
+.flash-sale h2{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.flash-sale p{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.flash-sale button{
+background:#fff;
+color:#000;
+border:none;
+padding:15px 40px;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.flash-sale button:hover{
+transform:scale(1.08);
+}
