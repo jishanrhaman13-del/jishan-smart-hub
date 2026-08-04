@@ -325,3 +325,48 @@ float:right;
 font-size:28px;
 cursor:pointer;
 }
+// LOGIN POPUP
+
+const userIcon=document.querySelector(".fa-user");
+const popup=document.getElementById("loginPopup");
+const close=document.querySelector(".close-login");
+
+if(userIcon){
+
+userIcon.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+popup.style.display="flex";
+
+});
+
+}
+
+if(close){
+
+close.onclick=()=>{
+
+popup.style.display="none";
+
+};
+
+}
+
+window.onclick=(e)=>{
+
+if(e.target===popup){
+
+popup.style.display="none";
+
+}
+
+};
+
+document.getElementById("loginBtn").onclick=()=>{
+
+alert("Login feature will be connected to database later.");
+
+popup.style.display="none";
+
+};
