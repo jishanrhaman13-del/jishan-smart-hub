@@ -67,3 +67,90 @@ document.querySelectorAll("a").forEach(link => {
     });
 
 });
+// ===========================
+// JU MART V1 - Part 2
+// Flash Sale Countdown
+// ===========================
+
+let hours = 12;
+let minutes = 59;
+let seconds = 59;
+
+const timer = document.getElementById("countdown");
+
+function updateTimer() {
+
+    if (!timer) return;
+
+    timer.innerHTML =
+        `${String(hours).padStart(2,"0")}:` +
+        `${String(minutes).padStart(2,"0")}:` +
+        `${String(seconds).padStart(2,"0")}`;
+
+    seconds--;
+
+    if (seconds < 0) {
+        seconds = 59;
+        minutes--;
+    }
+
+    if (minutes < 0) {
+        minutes = 59;
+        hours--;
+    }
+
+    if (hours < 0) {
+        hours = 12;
+        minutes = 59;
+        seconds = 59;
+    }
+
+}
+
+setInterval(updateTimer,1000);
+
+
+// ===========================
+// Fade Animation
+// ===========================
+
+const observer = new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("fade-up");
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+
+observer.observe(sec);
+
+});
+
+
+// ===========================
+// Header Shadow on Scroll
+// ===========================
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>50){
+
+header.style.boxShadow="0 8px 20px rgba(0,0,0,.35)";
+
+}else{
+
+header.style.boxShadow="none";
+
+}
+
+});
