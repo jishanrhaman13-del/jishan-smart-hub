@@ -404,3 +404,13 @@ if (sellerRegister) {
         sellerPopup.style.display = "none";
     });
 }
+// Seller Popup Close Fix
+
+let sellerPopup = document.getElementById("sellerPopup");
+let closeSeller = document.getElementById("closeSeller");
+
+if(closeSeller){
+    closeSeller.onclick = function(){
+        sellerPopup.style.display = "none";
+    };
+}
