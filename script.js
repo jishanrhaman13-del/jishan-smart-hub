@@ -376,7 +376,7 @@ popup.style.display="none";
 
 const sellerBtnOpen = document.querySelector(".seller .btn");
 const sellerPopup = document.getElementById("sellerPopup");
-const sellerClose = document.querySelector(".close-seller");
+const sellerClose = document.getElementById("closeSeller");
 const sellerRegister = document.getElementById("sellerBtn");
 
 if (sellerBtnOpen) {
