@@ -370,3 +370,37 @@ alert("Login feature will be connected to database later.");
 popup.style.display="none";
 
 };
+// ==========================
+// SELLER POPUP
+// ==========================
+
+const sellerBtnOpen = document.querySelector(".seller .btn");
+const sellerPopup = document.getElementById("sellerPopup");
+const sellerClose = document.querySelector(".close-seller");
+const sellerRegister = document.getElementById("sellerBtn");
+
+if (sellerBtnOpen) {
+    sellerBtnOpen.addEventListener("click", function(e) {
+        e.preventDefault();
+        sellerPopup.style.display = "flex";
+    });
+}
+
+if (sellerClose) {
+    sellerClose.addEventListener("click", function() {
+        sellerPopup.style.display = "none";
+    });
+}
+
+window.addEventListener("click", function(e) {
+    if (e.target === sellerPopup) {
+        sellerPopup.style.display = "none";
+    }
+});
+
+if (sellerRegister) {
+    sellerRegister.addEventListener("click", function() {
+        alert("✅ Seller Registration Successful!");
+        sellerPopup.style.display = "none";
+    });
+}
