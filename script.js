@@ -183,3 +183,54 @@ searchInput.addEventListener("keyup", function () {
     });
 
 });
+// ===========================
+// JU MART CART SYSTEM
+// ===========================
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartCount = document.getElementById("cartCount");
+
+function updateCart(){
+
+if(cartCount){
+
+cartCount.innerHTML = cart.length;
+
+}
+
+}
+
+updateCart();
+
+
+document.querySelectorAll(".product-card button")
+.forEach(button=>{
+
+button.addEventListener("click",function(){
+
+let product = this.parentElement;
+
+let name = product.querySelector("h3").innerText;
+
+let price = product.querySelector(".price").innerText;
+
+
+cart.push({
+name:name,
+price:price
+});
+
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+
+updateCart();
+
+
+alert(name+" Added To Cart 🛒");
+
+
+});
+
+});
