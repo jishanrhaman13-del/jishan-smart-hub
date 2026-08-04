@@ -234,3 +234,43 @@ alert(name+" Added To Cart 🛒");
 });
 
 });
+// ===========================
+// JU MART WISHLIST SYSTEM
+// ===========================
+
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+let wishCount = document.getElementById("wishCount");
+
+function updateWishlist(){
+
+if(wishCount){
+
+wishCount.innerHTML = wishlist.length;
+
+}
+
+}
+
+updateWishlist();
+
+
+let wishIcon = document.getElementById("wishlistIcon");
+
+if(wishIcon){
+
+wishIcon.addEventListener("click",function(e){
+
+e.preventDefault();
+
+wishlist.push("Product");
+
+localStorage.setItem("wishlist",JSON.stringify(wishlist));
+
+updateWishlist();
+
+alert("Added to Wishlist ❤️");
+
+});
+
+}
