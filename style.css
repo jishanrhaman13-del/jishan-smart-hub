@@ -1,1 +1,201 @@
+/* ==========================================
+   JU MART | Premium Theme - Part 1
+========================================== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b1020;
+color:#fff;
+}
+
+/* Top Bar */
+
+.top-bar{
+background:#06142f;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 5%;
+font-size:14px;
+flex-wrap:wrap;
+}
+
+.top-bar a{
+color:#FFD700;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+}
+
+/* Header */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 5%;
+background:#101828;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo h1{
+font-size:34px;
+color:#FFD700;
+font-weight:800;
+}
+
+.logo span{
+font-size:13px;
+color:#ddd;
+}
+
+.search-box{
+display:flex;
+width:45%;
+background:#fff;
+border-radius:50px;
+overflow:hidden;
+}
+
+.search-box input{
+flex:1;
+padding:14px;
+border:none;
+outline:none;
+font-size:15px;
+}
+
+.search-box button{
+width:60px;
+background:#FFD700;
+border:none;
+cursor:pointer;
+font-size:18px;
+}
+
+.header-icons{
+display:flex;
+gap:20px;
+}
+
+.header-icons a{
+color:#fff;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.header-icons a:hover{
+color:#FFD700;
+}
+
+/* Navigation */
+
+nav{
+background:#0a1b45;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav ul li a{
+display:block;
+padding:18px 22px;
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+nav ul li a:hover{
+background:#FFD700;
+color:#000;
+}
+
+/* Hero */
+
+.hero{
+min-height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+background:linear-gradient(135deg,#0b1020,#0a1b45,#123d8f);
+}
+
+.hero-content h2{
+color:#FFD700;
+letter-spacing:2px;
+margin-bottom:15px;
+}
+
+.hero-content h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#ddd;
+}
+
+.hero-content button{
+margin-top:35px;
+padding:16px 45px;
+background:#FFD700;
+border:none;
+border-radius:50px;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.hero-content button:hover{
+transform:scale(1.05);
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:18px;
+}
+
+.search-box{
+width:100%;
+}
+
+.header-icons{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.hero-content h1{
+font-size:36px;
+}
+
+.top-bar{
+justify-content:center;
+text-align:center;
+gap:10px;
+}
+
+}
